@@ -1,0 +1,9 @@
+<div class = "container">
+  <h1 class = "text-primary">My Lists</h1>
+  <ul>
+    <%@lists.each do |list|%>
+    <li class = "text-decoration-none"><%= link_to list.name, list_path(list)%></li>
+    <% end %>
+  </ul>
+  <%= link_to " + create new list", new_list_path %>
+</div>
